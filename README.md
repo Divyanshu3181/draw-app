@@ -1,84 +1,92 @@
-# Turborepo starter
+🖌️ Draw-App
+A collaborative drawing application similar to Excalidraw, allowing users to create and share drawings in real-time. Users can join rooms, draw shapes, erase, and move elements while communicating through WebSockets.
 
-This Turborepo starter is maintained by the Turborepo core team.
+🚀 Features
+User Authentication: Sign up and sign in securely.
+Room Management: Create or join a drawing room.
+Real-time Collaboration:
+Multiple users in the same room can draw together in real time.
+Live updates of drawings across all connected users.
+Drawing Tools:
+Pencil ✏️
+Rectangle ▭
+Circle ⭕
+Eraser 🧽
+Move Objects 🔄
+Chat Feature: Communicate with other users in the room.
+Monorepo Setup: Managed using TurboRepo.
+🛠 Tech Stack
+Frontend: Next.js, TypeScript
+Backend: HTTP Server, WebSockets
+Database: PostgreSQL
+Real-time Sync: WebSockets (ws)
+Monorepo Management: TurboRepo
+📦 Installation
+Clone the repository:
 
-## Using this example
+sh
+Copy
+Edit
+git clone https://github.com/yourusername/draw-app.git  
+cd draw-app  
+Setup Backend
+Navigate to the backend directory:
+sh
+Copy
+Edit
+cd packages/backend
+Install dependencies:
+sh
+Copy
+Edit
+npm install
+Set up environment variables (.env file):
+env
+Copy
+Edit
+DATABASE_URL=your_postgres_url
+JWT_SECRET=your_jwt_secret
+Start the backend server:
+sh
+Copy
+Edit
+npm run dev
+Setup Frontend
+Navigate to the frontend directory:
+sh
+Copy
+Edit
+cd packages/frontend
+Install dependencies:
+sh
+Copy
+Edit
+npm install
+Start the frontend app:
+sh
+Copy
+Edit
+npm run dev
+🚀 Running the App
+Once both frontend and backend are running, open http://localhost:3000 to start drawing!
 
-Run the following command:
+🎨 Screenshots (Optional)
+(Add screenshots showcasing the app UI here)
 
-```sh
-npx create-turbo@latest
-```
+🤝 Contributing
+Fork the repository.
+Create a new branch:
+sh
+Copy
+Edit
+git checkout -b feature-name
+Commit changes and push:
+sh
+Copy
+Edit
+git commit -m "Added new feature"
+git push origin feature-name
+Open a pull request.
+📜 License
+This project is licensed under the MIT License.
 
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
